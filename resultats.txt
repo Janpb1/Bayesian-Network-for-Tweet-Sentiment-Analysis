@@ -1,0 +1,443 @@
+Xarxa Bayesiana sense Laplace smoothing 
+
+Exercici 1 
+
+Cross validation 
+
+Para el fold  1 ; accuracy:  0.750283105022831  f1_score:  0.7260230050899764
+Para el fold  2 ; accuracy:  0.7509486344686506  f1_score:  0.7272818184545535
+Para el fold  3 ; accuracy:  0.7514326549436299  f1_score:  0.7273920054485542
+Para el fold  4 ; accuracy:  0.7505513723806958  f1_score:  0.7262458971210946
+Para el fold  5 ; accuracy:  0.7512865355549568  f1_score:  0.7280244472406975
+
+ Mitjana dels resultats 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.71      0.77    643219
+           1       0.66      0.80      0.73    451777
+
+    accuracy                           0.75   1094996
+   macro avg       0.75      0.76      0.75   1094996
+weighted avg       0.77      0.75      0.75   1094996
+
+Temps per al cross validation:  38.47426795959473 
+
+Test amb 70% train i 30% test 
+
+              precision    recall  f1-score   support
+
+           0       0.79      0.72      0.75    257745
+           1       0.69      0.76      0.72    211539
+
+    accuracy                           0.74    469284
+   macro avg       0.74      0.74      0.74    469284
+weighted avg       0.74      0.74      0.74    469284
+
+Temps:  11.952099800109863 
+
+
+ Exercici 2 
+
+1. Ampliem conjunt de train a primer a 75%, després a 80% i finalment a 85%, també augmentem la mida del diccionari 
+
+Test amb  10.0 % train i  90 % test i  10 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.83      0.70      0.76    837009
+           1       0.65      0.80      0.71    570843
+
+    accuracy                           0.74   1407852
+   macro avg       0.74      0.75      0.74   1407852
+weighted avg       0.76      0.74      0.74   1407852
+
+Temps:  8.814842224121094 
+
+Test amb  30.0 % train i  70 % test i  30 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.70      0.76    649411
+           1       0.65      0.80      0.72    445585
+
+    accuracy                           0.74   1094996
+   macro avg       0.74      0.75      0.74   1094996
+weighted avg       0.76      0.74      0.74   1094996
+
+Temps:  9.512305736541748 
+
+Test amb  50.0 % train i  50 % test i  50 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.70      0.76    471788
+           1       0.64      0.80      0.71    310352
+
+    accuracy                           0.74    782140
+   macro avg       0.74      0.75      0.74    782140
+weighted avg       0.76      0.74      0.74    782140
+
+Temps:  10.815556049346924 
+
+Test amb  70.0 % train i  30 % test i  70 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.81      0.71      0.76    268319
+           1       0.67      0.78      0.72    200966
+
+    accuracy                           0.74    469285
+   macro avg       0.74      0.75      0.74    469285
+weighted avg       0.75      0.74      0.74    469285
+
+Temps:  11.895238399505615 
+
+Test amb  80.0 % train i  20 % test i  80 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.80      0.71      0.76    176278
+           1       0.68      0.78      0.72    136578
+
+    accuracy                           0.74    312856
+   macro avg       0.74      0.74      0.74    312856
+weighted avg       0.75      0.74      0.74    312856
+
+Temps:  11.952455282211304 
+
+2. Augmentem la mida del diccionari 
+
+Test amb 70% train i 30% test i  10 %de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.72      0.77    275309
+           1       0.67      0.80      0.73    193975
+
+    accuracy                           0.75    469284
+   macro avg       0.75      0.76      0.75    469284
+weighted avg       0.77      0.75      0.75    469284
+
+Temps:  10.695295810699463 
+
+Test amb 70% train i 30% test i  50 %de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.85      0.70      0.77    282828
+           1       0.64      0.80      0.71    186456
+
+    accuracy                           0.74    469284
+   macro avg       0.74      0.75      0.74    469284
+weighted avg       0.76      0.74      0.75    469284
+
+Temps:  11.041381120681763 
+
+Test amb 70% train i 30% test i  75 %de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.81      0.71      0.76    266579
+           1       0.67      0.78      0.72    202705
+
+    accuracy                           0.74    469284
+   macro avg       0.74      0.74      0.74    469284
+weighted avg       0.75      0.74      0.74    469284
+
+Temps:  11.83791971206665 
+
+Test amb 70% train i 30% test i  100 %de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.79      0.72      0.75    257745
+           1       0.69      0.76      0.72    211539
+
+    accuracy                           0.74    469284
+   macro avg       0.74      0.74      0.74    469284
+weighted avg       0.74      0.74      0.74    469284
+
+Temps:  10.70973014831543 
+
+3. Utilitzar sempre la mateixa mida de diccionari, però modificant el conjunt de train 
+
+Test amb  10 % train i  90 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.68      0.76    867163
+           1       0.61      0.80      0.69    540689
+
+    accuracy                           0.73   1407852
+   macro avg       0.73      0.74      0.72   1407852
+weighted avg       0.75      0.73      0.73   1407852
+
+Temps:  9.154658555984497 
+
+Test amb  30 % train i  70 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.69      0.76    665656
+           1       0.63      0.80      0.70    429340
+
+    accuracy                           0.74   1094996
+   macro avg       0.74      0.75      0.73   1094996
+weighted avg       0.76      0.74      0.74   1094996
+
+Temps:  9.958493709564209 
+
+Test amb  50 % train i  50 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.70      0.76    471788
+           1       0.64      0.80      0.71    310352
+
+    accuracy                           0.74    782140
+   macro avg       0.74      0.75      0.74    782140
+weighted avg       0.76      0.74      0.74    782140
+
+Temps:  10.898264646530151 
+
+Test amb  70 % train i  30 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.70      0.77    282659
+           1       0.64      0.80      0.71    186626
+
+    accuracy                           0.74    469285
+   macro avg       0.74      0.75      0.74    469285
+weighted avg       0.76      0.74      0.75    469285
+
+Temps:  11.308394193649292 
+
+Test amb  80 % train i  20 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.70      0.77    187949
+           1       0.64      0.81      0.71    124907
+
+    accuracy                           0.74    312856
+   macro avg       0.74      0.75      0.74    312856
+weighted avg       0.76      0.74      0.75    312856
+
+Temps:  11.709736108779907 
+
+Xarxa Bayesiana amb Laplace smoothing 
+
+
+ Exercici 3 
+
+Cross validation 
+
+Para el fold  1 ; accuracy:  0.7518721461187214  f1_score:  0.7281042350492355
+Para el fold  2 ; accuracy:  0.7523367686610442  f1_score:  0.7289211423316441
+Para el fold  3 ; accuracy:  0.7531175941442655  f1_score:  0.7296176830945416
+Para el fold  4 ; accuracy:  0.752039963652802  f1_score:  0.7281900862435743
+Para el fold  5 ; accuracy:  0.7535696510029726  f1_score:  0.7312484438025995
+
+ Mitjana dels resultats 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.72      0.77    641834
+           1       0.67      0.80      0.73    453162
+
+    accuracy                           0.75   1094996
+   macro avg       0.75      0.76      0.75   1094996
+weighted avg       0.77      0.75      0.75   1094996
+
+Temps per al cross validation:  43.25758647918701 
+
+1. Ampliem conjunt de train a primer a 75%, després a 80% i finalment a 85%, també augmentem la mida del diccionari 
+
+Test amb  10.0 % train i  90 % test i  10 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.83      0.71      0.76    830917
+           1       0.65      0.80      0.72    576935
+
+    accuracy                           0.74   1407852
+   macro avg       0.74      0.75      0.74   1407852
+weighted avg       0.76      0.74      0.75   1407852
+
+Temps:  11.210357666015625 
+
+Test amb  30.0 % train i  70 % test i  30 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.83      0.71      0.77    639191
+           1       0.67      0.80      0.73    455805
+
+    accuracy                           0.75   1094996
+   macro avg       0.75      0.76      0.75   1094996
+weighted avg       0.76      0.75      0.75   1094996
+
+Temps:  11.85092544555664 
+
+Test amb  50.0 % train i  50 % test i  50 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.72      0.77    457763
+           1       0.67      0.80      0.73    324377
+
+    accuracy                           0.75    782140
+   macro avg       0.75      0.76      0.75    782140
+weighted avg       0.77      0.75      0.75    782140
+
+Temps:  12.256795167922974 
+
+Test amb  70.0 % train i  30 % test i  70 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.83      0.73      0.77    269021
+           1       0.69      0.80      0.74    200264
+
+    accuracy                           0.76    469285
+   macro avg       0.76      0.76      0.76    469285
+weighted avg       0.77      0.76      0.76    469285
+
+Temps:  13.086312055587769 
+
+Test amb  80.0 % train i  20 % test i  80 % de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.83      0.73      0.77    178571
+           1       0.69      0.80      0.74    134285
+
+    accuracy                           0.76    312856
+   macro avg       0.76      0.76      0.76    312856
+weighted avg       0.77      0.76      0.76    312856
+
+Temps:  12.41695237159729 
+
+2. Augmentem la mida del diccionari 
+
+Test amb 70% train i 30% test i  10 %de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.72      0.77    275309
+           1       0.67      0.80      0.73    193975
+
+    accuracy                           0.75    469284
+   macro avg       0.75      0.76      0.75    469284
+weighted avg       0.77      0.75      0.75    469284
+
+Temps:  10.825093030929565 
+
+Test amb 70% train i 30% test i  50 %de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.85      0.70      0.77    282828
+           1       0.64      0.80      0.71    186456
+
+    accuracy                           0.74    469284
+   macro avg       0.74      0.75      0.74    469284
+weighted avg       0.76      0.74      0.75    469284
+
+Temps:  10.983657598495483 
+
+Test amb 70% train i 30% test i  75 %de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.81      0.71      0.76    266579
+           1       0.67      0.78      0.72    202705
+
+    accuracy                           0.74    469284
+   macro avg       0.74      0.74      0.74    469284
+weighted avg       0.75      0.74      0.74    469284
+
+Temps:  12.35277533531189 
+
+Test amb 70% train i 30% test i  100 %de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.79      0.72      0.75    257745
+           1       0.69      0.76      0.72    211539
+
+    accuracy                           0.74    469284
+   macro avg       0.74      0.74      0.74    469284
+weighted avg       0.74      0.74      0.74    469284
+
+Temps:  12.08534550666809 
+
+3. Utilitzar sempre la mateixa mida de diccionari, però modificant el conjunt de train 
+
+Test amb  10 % train i  90 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.68      0.76    867163
+           1       0.61      0.80      0.69    540689
+
+    accuracy                           0.73   1407852
+   macro avg       0.73      0.74      0.72   1407852
+weighted avg       0.75      0.73      0.73   1407852
+
+Temps:  9.589042901992798 
+
+Test amb  30 % train i  70 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.69      0.76    665656
+           1       0.63      0.80      0.70    429340
+
+    accuracy                           0.74   1094996
+   macro avg       0.74      0.75      0.73   1094996
+weighted avg       0.76      0.74      0.74   1094996
+
+Temps:  10.79347848892212 
+
+Test amb  50 % train i  50 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.70      0.76    471788
+           1       0.64      0.80      0.71    310352
+
+    accuracy                           0.74    782140
+   macro avg       0.74      0.75      0.74    782140
+weighted avg       0.76      0.74      0.74    782140
+
+Temps:  11.285456657409668 
+
+Test amb  70 % train i  30 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.70      0.77    282659
+           1       0.64      0.80      0.71    186626
+
+    accuracy                           0.74    469285
+   macro avg       0.74      0.75      0.74    469285
+weighted avg       0.76      0.74      0.75    469285
+
+Temps:  12.431567668914795 
+
+Test amb  80 % train i  20 % test i 50% de diccionari 
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.70      0.77    187949
+           1       0.64      0.81      0.71    124907
+
+    accuracy                           0.74    312856
+   macro avg       0.74      0.75      0.74    312856
+weighted avg       0.76      0.74      0.75    312856
+
+Temps:  12.452528476715088 
+
